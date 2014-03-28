@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: my_project_development
+  database: my
   pool: 5
   username: root
   password: root
@@ -26,7 +26,7 @@ test:
   database: my_project_test
   pool: 5
   username: root
-  password:
+  password: root
   socket: /var/run/mysqld/mysqld.sock
 
 production:
@@ -35,5 +35,5 @@ production:
   database: my_project_production
   pool: 5
   username: root
-  password:
+  password: root
   socket: /var/run/mysqld/mysqld.sock
