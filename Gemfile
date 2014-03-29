@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use mysql as the database for Active Record
-
+# Use postgresql as the database for Active Record
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -33,10 +32,6 @@ group :doc do
 end
 gem 'bcrypt-ruby', '3.1.2'
 gem 'bootstrap-sass', '2.3.2.0'
-group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
-end
 #gem 'client_side_validations'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
