@@ -1,0 +1,52 @@
+<% provide(:title, 'Sign up') %>
+<h1>* WHAT TRAVEL SERVICES</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, url:"step4", method:'post', html: { :id => "user", class: "bs-docs-example form-horizontal"}) do |f|  %>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Flight : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :flight_class_type, options_from_collection_for_select(@flight_class_type, :id, :name) %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Include Budget Airlines : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :include_flight_budget_type, options_from_collection_for_select(@include_flight_budget_type, :id, :name) %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <%= f.label "Hotel stars : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :hotel_star_type, options_from_collection_for_select(@hotel_star_type, :id, :name) %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <%= f.label "Hotel Board Type : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :hotel_board_type, options_from_collection_for_select(@hotel_board_type, :id, :name) %>
+	      </div>
+	  </div>
+
+
+
+
+
+
+
+
+
+
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Next", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

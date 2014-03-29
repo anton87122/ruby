@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>ID:</strong>
+  <%= @user.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @user.mail %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @user.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @user.to %>
+</p>
+
+<p>
+  <strong>Fixed dates:</strong>
+  <%= @user.fixed_dates %>
+</p>
+
+<p>
+  <strong>Flexible dates:</strong>
+  <%= @user.flexible_dates %>
+</p>
+
+<p>
+  <strong>Adults:</strong>
+  <%= @user.adults %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @user.children %>
+</p>
+
+<p>
+  <strong>Departure date:</strong>
+  <%= @user.departure_date %>
+</p>
+
+<p>
+  <strong>Nights:</strong>
+  <%= @user.nights %>
+</p>
+
+<p>
+  <strong>Lead type:</strong>
+  <%= @user.lead_type %>
+</p>
+
+<p>
+  <strong>Travel type:</strong>
+  <%= @user.travel_type %>
+</p>
+
+<p>
+  <strong>Budget type:</strong>
+  <%= @user.budget_type %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

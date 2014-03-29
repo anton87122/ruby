@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mail: MyString
+  password: MyString
+  from: 1
+  to: 1
+  fixed_dates: 1
+  flexible_dates: 1
+  adults: 1
+  children: 1
+  departure_date: 2014-03-19
+  nights: 1
+  lead_type: 1
+  travel_type: 1
+  budget_type: 1
+  flight_expectaion_type: 1
+  lodging_expectation_type: 1
+  lodging_preference_type: 1
+  online_reviews_type: 1
+  traveller_profile_type: 1
+
+two:
+  name: MyString
+  mail: MyString
+  password: MyString
+  from: 1
+  to: 1
+  fixed_dates: 1
+  flexible_dates: 1
+  adults: 1
+  children: 1
+  departure_date: 2014-03-19
+  nights: 1
+  lead_type: 1
+  travel_type: 1
+  budget_type: 1
+  flight_expectaion_type: 1
+  lodging_expectation_type: 1
+  lodging_preference_type: 1
+  online_reviews_type: 1
+  traveller_profile_type: 1

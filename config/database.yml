@@ -43,7 +43,7 @@ production:
   database: my
   port: 5432
   host: localhost
-  username: root
+  username: postgres
   password: root
   
 development:
@@ -52,5 +52,5 @@ development:
   database: my
   port: 5432
   host: localhost
-  username: root
+  username: postgres
   password: root

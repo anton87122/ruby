@@ -1,0 +1,52 @@
+<% provide(:title, 'Sign up') %>
+<h1>TRAVEL DETAILS - REQUIRED</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, url:"step2", method:'post', html: { :id => "user", class: "bs-docs-example form-horizontal"}) do |f|  %>
+	  
+	  <h3>WHERE</h3>
+      <div class="controls-group">	  	
+	      <%= f.label "Leaving From : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :from, options_from_collection_for_select(@area, :id, :name) %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Traveling To : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :to, options_from_collection_for_select(@country, :id, :name) %>
+	      </div>
+	  </div>
+	  
+	  <h3>WHEN</h3>	
+      <div class="controls-group">	  	
+	      <%= f.label "Depature date * ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :departure_date ,:class => "textfield required date" %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label :nights, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :nights ,:class => "textfield number" %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <div class="controls">
+	      	<%= f.check_box :flexible_dates %>FLEXIBLE DEPARTURE DATE
+	      </div>
+	      <%= f.label "FLEXIBLE DEPARTURE DATE", :class => "control-label" %>
+	  </div>
+	  
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Continue", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

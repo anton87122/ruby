@@ -1,0 +1,64 @@
+<% provide(:title, 'Sign up') %>
+<h1>TRAVEL DETAILS - REQUIRED</h1>
+
+<div class="row">
+  <h3>CONTACT INFORMATION</h3>		
+  <div class="span6 offset3">
+    <%= form_for @user, :validate => true, url:"step1", html: {  :id => "user", class: "bs-docs-example form-horizontal"}  do |f|  %>
+      <div class="controls-group">	  	
+	      <%= f.label "User Name * ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :name , :class => "textfield required" %>
+	      </div>
+      </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Email Address * ", :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.text_field :mail, :class => "textfield required email" %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Password * " , :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.password_field :password , :class => "textfield required password" %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <%= f.label "Confirm Password * ", :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.password_field :password_confirmation , :class => "textfield required password" %>
+	      </div>
+	  </div>
+
+	  <div class="controls-group">	  	
+	      <%= f.label "Phone Number(Optional)", :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.text_field :phone %>
+	      </div>
+	  </div>
+
+	  <div class="controls-group">	  	
+	      <%= f.label "Country * ", :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.text_field :country , :class => "textfield required" %>
+	      </div>
+	  </div>
+
+	  <div class="controls-group">	  	
+	      <%= f.label "ZIP Code * ", :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.text_field :zipcode , :class => "textfield required" %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Next", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

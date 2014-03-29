@@ -1,0 +1,52 @@
+<% provide(:title, 'Sign up') %>
+<h1>* WHAT TRAVEL SERVICES</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@agent, url:"agentstep_update", method:'post', html: { class: "bs-docs-example form-horizontal"}) do |f|  %>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Occassion : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :occasion_type, options_from_collection_for_select(@occasion_type, :id, :name) %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label "Activity : ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :activity_type, options_from_collection_for_select(@activity_type, :id, :name) %>
+	      </div>
+	  </div>
+	  
+      <div class="controls-group">	  	
+	      <%= f.label :about_me, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :about_me %>
+	      </div>
+	  </div>
+	  
+      <div class="controls-group">	  	
+	      <%= f.label "Additional Requirements", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :additional_comment %>
+	      </div>
+	  </div>
+
+
+
+
+
+
+
+
+
+
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Next", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

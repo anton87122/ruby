@@ -1,0 +1,64 @@
+
+<% provide(:title, 'Sign up') %>
+<h1>TRAVEL DETAILS - REQUIRED</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, html: { class: "bs-docs-example form-horizontal"}) do |f|  %>
+      <div class="controls-group">	  	
+	      <%= f.label :name, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :name %>
+	      </div>
+      </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label :budget_type, :class => "control-label" %>
+	      <div class="controls">
+		  	<%= f.select :budget_type, options_from_collection_for_select(@budget_type, :id, :name) %>	
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label :flight_expectation_type, :class => "control-label" %>
+	      <div class="controls">
+		      <%= f.select :flight_expectation_type, options_from_collection_for_select(@flight_expectation, :id, :name) %>
+	      </div>
+	  </div>
+	  
+      <div class="controls-group">	  	
+	      <%= f.label :lodging_expectation_type, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :lodging_expectation_type, options_from_collection_for_select(@lodging_expectation, :id, :name) %>
+	      </div>
+	  </div>
+
+      <div class="controls-group">	  	
+	      <%= f.label :lodging_preference_type, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :lodging_preference_type, options_from_collection_for_select(@lodging_preference, :id, :name) %>
+	      </div>
+	  </div>
+		
+      <div class="controls-group">	  	
+	      <%= f.label :online_reviews_type, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :online_reviews_type, options_from_collection_for_select(@online_reviews, :id, :name) %>
+	      </div>
+	  </div>
+	  
+      <div class="controls-group">	  	
+	      <%= f.label :traveller_profile_type, :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.select :traveller_profile_type, options_from_collection_for_select(@traveller_profile, :id, :name) %>
+	      </div>
+	  </div>
+
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Next", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

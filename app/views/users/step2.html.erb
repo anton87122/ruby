@@ -1,0 +1,71 @@
+<script>
+$(document).ready(function(){
+  $('#flexible_type').hide();
+});
+function onSelBudgetType(type_id) {
+	  
+ if ( $("#user_budget_type").val() == '1' ){
+ 	$('#flexible_type').hide();
+ 	$('#fixed_type').show();
+ }else{
+ 	$('#flexible_type').show();
+ 	$('#fixed_type').hide();
+ }
+}
+</script>
+<% provide(:title, 'Sign up') %>
+<h1>* NUMBER OF TRAVELERS</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user, url:"step3", method:'post', html: { :id => "user", class: "bs-docs-example form-horizontal"}) do |f|  %>
+	  <div class="controls-group">	  	
+	      <%= f.label "Adults * ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :adults ,:class => "textfield required number" %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <%= f.label "Childrens ", :class => "control-label" %>
+	      <div class="controls">
+	      	<%= f.text_field :children ,:class => "textfield number" %>
+	      </div>
+	  </div>
+	  
+	  <div class="controls-group">	  	
+	      <%= f.label "Budget Type" , :class => "control-label" %>
+	      <div class="controls">
+		  	<%= f.select :budget_type, options_from_collection_for_select(@budget_type, :id, :name),{}, :onchange => "onSelBudgetType(this.value)" %>	
+	      </div>
+	  </div>
+	  <div id="flexible_type">
+		  <div class="controls-group">	  	
+		      <%= f.label "Budget From ", :class => "control-label" %>
+		      <div class="controls">
+		      	<%= f.text_field :budget_from ,:class => "textfield required number" %>
+		      </div>
+		  </div>
+		  <div class="controls-group">	  	
+		      <%= f.label "Budget To ", :class => "control-label" %>
+		      <div class="controls">
+		      	<%= f.text_field :budget_to ,:class => "textfield required number" %>
+		      </div>
+		  </div>
+	  </div>
+	  <div id="fixed_type">
+	  	<div class="controls-group">	  	
+		      <%= f.label "Budget", :class => "control-label" %>
+		      <div class="controls">
+		      	<%= f.text_field :budget_from ,:class => "textfield required number" %>
+		      </div>
+		  </div>
+	  </div>
+	  <div class="controls-group">
+	  	<div class="controls">
+      		<%= f.submit "Continue", class: "btn btn-large btn-primary" %>
+      	</div>
+      </div>
+    <% end %>
+  </div>
+</div>

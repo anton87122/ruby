@@ -1,0 +1,74 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :mail %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.number_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br>
+    <%= f.number_field :to %>
+  </div>
+  <div class="field">
+    <%= f.label :fixed_dates %><br>
+    <%= f.number_field :fixed_dates %>
+  </div>
+  <div class="field">
+    <%= f.label :flexible_dates %><br>
+    <%= f.number_field :flexible_dates %>
+  </div>
+  <div class="field">
+    <%= f.label :adults %><br>
+    <%= f.number_field :adults %>
+  </div>
+  <div class="field">
+    <%= f.label :children %><br>
+    <%= f.number_field :children %>
+  </div>
+  <div class="field">
+    <%= f.label :departure_date %><br>
+    <%= f.date_select :departure_date %>
+  </div>
+  <div class="field">
+    <%= f.label :nights %><br>
+    <%= f.number_field :nights %>
+  </div>
+  <div class="field">
+    <%= f.label :lead_type %><br>
+    <%= f.number_field :lead_type %>
+  </div>
+  <div class="field">
+    <%= f.label :travel_type %><br>
+    <%= f.number_field :travel_type %>
+  </div>
+  <div class="field">
+    <%= f.label :budget_type %><br>
+    <%= f.number_field :budget_type %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

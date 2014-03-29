@@ -1,0 +1,63 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mail</th>
+      <th>Password</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Fixed dates</th>
+      <th>Flexible dates</th>
+      <th>Adults</th>
+      <th>Children</th>
+      <th>Departure date</th>
+      <th>Nights</th>
+      <th>Lead type</th>
+      <th>Travel type</th>
+      <th>Budget type</th>
+      <th>Flight expectaion type</th>
+      <th>Lodging expectation type</th>
+      <th>Lodging preference type</th>
+      <th>Online reviews type</th>
+      <th>Traveller profile type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.mail %></td>
+        <td><%= user.password %></td>
+        <td><%= user.from %></td>
+        <td><%= user.to %></td>
+        <td><%= user.fixed_dates %></td>
+        <td><%= user.flexible_dates %></td>
+        <td><%= user.adults %></td>
+        <td><%= user.children %></td>
+        <td><%= user.departure_date %></td>
+        <td><%= user.nights %></td>
+        <td><%= user.lead_type %></td>
+        <td><%= user.travel_type %></td>
+        <td><%= user.budget_type %></td>
+        <td><%= user.flight_expectaion_type %></td>
+        <td><%= user.lodging_expectation_type %></td>
+        <td><%= user.lodging_preference_type %></td>
+        <td><%= user.online_reviews_type %></td>
+        <td><%= user.traveller_profile_type %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

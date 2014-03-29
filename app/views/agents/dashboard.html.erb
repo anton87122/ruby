@@ -1,0 +1,103 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>ID:</strong>
+  <%= @agent.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @agent.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @agent.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @agent.password %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @agent.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @agent.to %>
+</p>
+
+<p>
+  <strong>Adults:</strong>
+  <%= @agent.adults %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @agent.children %>
+</p>
+
+<p>
+  <strong>Departure date:</strong>
+  <%= @agent.departure_date %>
+</p>
+
+<p>
+  <strong>Nights:</strong>
+  <%= @agent.nights %>
+</p>
+
+<p>
+  <strong>Travel type:</strong>
+  <%= @agent.travel_type %>
+</p>
+
+<p>
+  <strong>Budget type:</strong>
+  <%= @agent.budget_type %>
+</p>
+<p>
+  <strong>Budget Limit:</strong>
+  <%= @agent.budget_limit %>
+</p>
+<p>
+  <strong>Budget From:</strong>
+  <%= @agent.budget_from %>
+</p>
+<p>
+  <strong>Budget To:</strong>
+  <%= @agent.budget_to %>
+</p>
+<p>
+  <strong>Flight Class Type:</strong>
+  <%= @agent.flight_class_type %>
+</p>
+<p>
+  <strong>Hotel Star type:</strong>
+  <%= @agent.hotel_star_type %>
+</p>
+<p>
+  <strong>Hotel Board type:</strong>
+  <%= @agent.hotel_board_type %>
+</p>
+<p>
+  <strong>Occasion type:</strong>
+  <%= @agent.occasion_type %>
+</p>
+<p>
+  <strong>Activities type:</strong>
+  <%= @agent.activity_type %>
+</p>
+<p>
+  <strong>About me:</strong>
+  <%= @agent.about_me %>
+</p>
+<p>
+  <strong>Additional Information:</strong>
+  <%= @agent.additional_comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@agent) %> |
+<%= link_to 'Back', users_path %>
